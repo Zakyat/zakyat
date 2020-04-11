@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  nginx:
+    build: ./nginx/
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - servers
+  backend:
+    build: ./backend/
+    env_file:
+      - ./backend/.env
+    networks:
+      - servers
+      - mongo
+    depends_on:
+      - db
+    volumes:
+      - ./backend/zakat:/app/zakat        # To detect file changes. Dev only
+      - ./backend/zakat/media:/app/zakat/media
+  frontend:
+    build: ./frontend/
+    env_file:
+      - ./frontend/.env
+    networks:
+      - servers
+    ports:
+      - 3000:3000           # Dev only, for hot reload
+    volumes:
+      - ./frontend:/app/    # To detect changes. Dev only
+      - /app/node_modules   # Except for node_modules
+  db:
+    image: mongo:4.2
+    env_file:
+      - ./mongo.env
+    networks:
+      - mongo
+    ports:
+      - 27018:27017         # Dev only. to inspect the database
+    volumes:
+      - database:/data/db
+
+networks:
+  servers:
+    driver: bridge
+  mongo:
+    driver: bridge
+
+volumes:
+  database:
