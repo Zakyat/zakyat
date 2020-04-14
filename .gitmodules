@@ -1,6 +1,8 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/enghamzasalem/zakyat-backend.git
+	branch = master
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/enghamzasalem/zakyat-frontend.git
+	branch = master
