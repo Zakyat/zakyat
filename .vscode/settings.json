@@ -1,14 +1,16 @@
 {
-	"eslint.format.enable": true,
-	"eslint.workingDirectories": [
-		"frontend"
-	],
-	"editor.detectIndentation": false,
+    "eslint.format.enable": true,
+    "eslint.workingDirectories": [
+        "frontend"
+    ],
+    "editor.detectIndentation": false,
     "editor.insertSpaces": true,
-	"[python]": {
-		"editor.tabSize": 4
-	},
-	"[vue]": {
-		"editor.tabSize": 2
-	}
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "[vue]": {
+        "editor.tabSize": 2
+    }
 }
