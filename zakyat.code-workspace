@@ -1,0 +1,41 @@
+{
+    "folders": [
+        {
+            "name": "Frontend",
+            "path": "frontend"
+        },
+        {
+            "name": "Backend",
+            "path": "backend"
+        },
+        {
+            "name": "Zakyat",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.insertFinalNewline": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.fixAll.stylelint": true
+        },
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "stylelint.enable": true,
+        "i18n-ally.localesPaths": "locales",
+        "i18n-ally.sourceLanguage": "en",
+        "i18n-ally.keystyle": "nested"
+    },
+    "extensions": {
+        "recommendations": [
+            "octref.vetur",
+            "dbaeumer.vscode-eslint",
+            "antfu.i18n-ally",
+            "stylelint.vscode-stylelint",
+            "ms-python.python",
+            "ms-azuretools.vscode-docker"
+        ]
+    },
+    "i18n-ally.ignoredLocales": []
+}

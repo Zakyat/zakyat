@@ -1,22 +1,11 @@
 {
-	"eslint.format.enable": true,
-	"eslint.workingDirectories": ["frontend"],
-	"editor.detectIndentation": false,
-	"editor.insertSpaces": true,
-	"editor.formatOnSave": false,
-	"files.insertFinalNewline": true,
-	"[python]": {
-		"editor.tabSize": 4
-	},
-	"[vue]": {
-		"editor.tabSize": 2
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "frontend": true,
+        "backend": true
     },
-    "css.validate": false,
-    "less.validate": false,
-    "scss.validate": false,
-    "stylelint.enable":true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.fixAll.stylelint": true
-    }
 }
