@@ -3,11 +3,11 @@
 There are separate servers for the backend and the frontend. SSR is achieved through Nuxt requesting the data from the Django app. Docker is used for a consistent and easy-to-use development environment.
 
 ## Configuration
-Create a file in the root directory called "mongo.env" and add the following environment variables, filling in values for the username and password:
+Create a file in the root directory called ".env" and add the following environment variables, filling in values for the username and password:
 ```bash
-MONGO_INITDB_ROOT_USERNAME=
-MONGO_INITDB_ROOT_PASSWORD=
-MONGO_INITDB_DATABASE=zakat
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_DB=zakat_db
 ```
 Follow any additional instructions in the submodules.
 
