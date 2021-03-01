@@ -16,7 +16,7 @@ services:
       - ./backend/.env
     networks:
       - servers
-      - mongo
+      - postgres
     depends_on:
       - db
     volumes:
@@ -34,20 +34,18 @@ services:
       - ./frontend:/app/    # To detect changes. Dev only
       - /app/node_modules   # Except for node_modules
   db:
-    image: mongo:4.2
-    env_file:
-      - ./mongo.env
-    networks:
-      - mongo
-    ports:
-      - 27018:27017         # Dev only. to inspect the database
+    image: postgres:12.0-alpine
     volumes:
-      - database:/data/db
+      - database:/var/lib/postgresql/data/
+    env_file:
+      - ./.env
+    networks:
+      - postgres
 
 networks:
   servers:
     driver: bridge
-  mongo:
+  postgres:
     driver: bridge
 
 volumes:
